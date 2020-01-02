@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="19015" />
+
+
+<title>Homework</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Homework</h1>
+<h4 class="author">19015</h4>
+<h4 class="date">2019/11/28</h4>
+
+
+
+<div id="questions" class="section level2">
+<h2>Questions</h2>
+<div id="section" class="section level3">
+<h3>8.3</h3>
+<ul>
+<li>The Count 5 test for equal variances in Section 6.4 is based on the maximum number of extreme points. Example 6.15 shows that the Count 5 criterion is not applicable for unequal sample sizes. Implement a permutation test for equal variance based on the maximum number of extreme points that applies when sample sizes are not necessarily equal.</li>
+</ul>
+</div>
+<div id="p31" class="section level3">
+<h3>P31</h3>
+<ul>
+<li>Power comparison (distance correlation test versus ball covariance test)</li>
+</ul>
+</div>
+</div>
+<div id="answers" class="section level2">
+<h2>Answers</h2>
+<div id="section-1" class="section level3">
+<h3>8.3</h3>
+<ul>
+<li>Three tests using permutation are developed.
+<ul>
+<li>Permute small sample size in large sample size</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">load</span>(<span class="st">&quot;A-19015-2019-11-22.RData&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># library(parallel)</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># set.seed(1234)</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"># cl &lt;- makeCluster(8)</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co"># maxout &lt;- function(x, y) {</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co">#   X &lt;- x - mean(x)</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">#   Y &lt;- y - mean(y)</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">#   outx &lt;- sum(X &gt; max(Y)) + sum(X &lt; min(Y))</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co">#   outy &lt;- sum(Y &gt; max(X)) + sum(Y &lt; min(X))</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co">#   as.numeric(max(c(outx, outy))&lt;=5)</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="co"># }  ## simple count5</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co"># count5test&lt;-function(X,Y){</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="co">#   X &lt;- X-mean(X)</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="co">#   Y &lt;- Y-mean(Y)</span></a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="co">#   n1 &lt;- length(X)</span></a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="co">#   n2 &lt;- length(Y)</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="co">#   if (n1==n2) {    </span></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="co">#     outx &lt;- sum(X &gt; max(Y)) + sum(X &lt; min(Y))</span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="co">#     outy &lt;- sum(Y &gt; max(X)) + sum(Y &lt; min(X))</span></a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="co">#     return(as.numeric(max(outx,outy)&lt;=5))</span></a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="co">#   }</span></a>
+<a class="sourceLine" id="cb1-22" title="22"><span class="co">#   if (n1&gt;n2) {    </span></a>
+<a class="sourceLine" id="cb1-23" title="23"><span class="co">#     res&lt;-sapply(1:1000,FUN=function(o){</span></a>
+<a class="sourceLine" id="cb1-24" title="24"><span class="co">#       k&lt;-sample(1:n1,n2,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb1-25" title="25"><span class="co">#       x&lt;-X[k]</span></a>
+<a class="sourceLine" id="cb1-26" title="26"><span class="co">#       y&lt;-Y</span></a>
+<a class="sourceLine" id="cb1-27" title="27"><span class="co">#       outx &lt;- sum(x &gt; max(y)) + sum(x &lt; min(y))</span></a>
+<a class="sourceLine" id="cb1-28" title="28"><span class="co">#       outy &lt;- sum(y &gt; max(x)) + sum(y &lt; min(x))</span></a>
+<a class="sourceLine" id="cb1-29" title="29"><span class="co">#       max(outx,outy)</span></a>
+<a class="sourceLine" id="cb1-30" title="30"><span class="co">#     })</span></a>
+<a class="sourceLine" id="cb1-31" title="31"><span class="co">#     return(as.numeric(mean(res)&lt;=5))</span></a>
+<a class="sourceLine" id="cb1-32" title="32"><span class="co">#   }</span></a>
+<a class="sourceLine" id="cb1-33" title="33"><span class="co">#   if (n1&lt;n2) {    </span></a>
+<a class="sourceLine" id="cb1-34" title="34"><span class="co">#     res&lt;-sapply(1:10000,FUN=function(o){</span></a>
+<a class="sourceLine" id="cb1-35" title="35"><span class="co">#       k&lt;-sample(1:n2,n1,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb1-36" title="36"><span class="co">#       x&lt;-X</span></a>
+<a class="sourceLine" id="cb1-37" title="37"><span class="co">#       y&lt;-Y[k]</span></a>
+<a class="sourceLine" id="cb1-38" title="38"><span class="co">#       outx &lt;- sum(x &gt; max(y)) + sum(x &lt; min(y))</span></a>
+<a class="sourceLine" id="cb1-39" title="39"><span class="co">#       outy &lt;- sum(y &gt; max(x)) + sum(y &lt; min(x))</span></a>
+<a class="sourceLine" id="cb1-40" title="40"><span class="co">#       max(outx,outy)</span></a>
+<a class="sourceLine" id="cb1-41" title="41"><span class="co">#     })</span></a>
+<a class="sourceLine" id="cb1-42" title="42"><span class="co">#     return(as.numeric(mean(res)&lt;=5)) ## compare whether the average maxout is larger than 5 </span></a>
+<a class="sourceLine" id="cb1-43" title="43"><span class="co">#   }</span></a>
+<a class="sourceLine" id="cb1-44" title="44"><span class="co"># }  ## permute small sample size in large sample size</span></a></code></pre></div>
+<ul>
+<li>Permute fixed sample size (20) in each sample</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># maxout20&lt;-function(X,Y){</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">#   X &lt;- X-mean(X)</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">#   Y &lt;- Y-mean(Y)</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">#   n1 &lt;- length(X)</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co">#   n2 &lt;- length(Y)</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="co">#   res&lt;-sapply(1:1000,FUN=function(o){</span></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co">#     k1&lt;-sample(1:n1,20,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">#     k2&lt;-sample(1:n2,20,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">#     x&lt;-X[k1]</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">#     y&lt;-Y[k2]</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co">#     outx &lt;- sum(x &gt; max(y)) + sum(x &lt; min(y))</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="co">#     outy &lt;- sum(y &gt; max(x)) + sum(y &lt; min(x))</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="co">#     max(outx,outy)</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co">#   })</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="co">#   return(as.numeric(mean(res)&lt;=5))</span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="co"># }  ## permute fixed sample size (20) in each sample</span></a></code></pre></div>
+<ul>
+<li>Permute half of the small sample size in each sample</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># count5test1&lt;-function(X,Y){</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="co">#   X &lt;- X-mean(X)</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="co">#   Y &lt;- Y-mean(Y)</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="co">#   n1 &lt;- length(X)</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="co">#   n2 &lt;- length(Y)</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="co">#   n  &lt;- min(n1%/%2,n2%/%2)</span></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="co">#   res&lt;-sapply(1:1000,FUN=function(o){</span></a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="co">#     k1&lt;-sample(1:n1,n,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="co">#     k2&lt;-sample(1:n2,n,replace = FALSE)</span></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="co">#     x&lt;-X[k1]</span></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="co">#     y&lt;-Y[k2]</span></a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="co">#     outx &lt;- sum(x &gt; max(y)) + sum(x &lt; min(y))</span></a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="co">#     outy &lt;- sum(y &gt; max(x)) + sum(y &lt; min(x))</span></a>
+<a class="sourceLine" id="cb3-14" title="14"><span class="co">#     max(outx,outy)</span></a>
+<a class="sourceLine" id="cb3-15" title="15"><span class="co">#   })</span></a>
+<a class="sourceLine" id="cb3-16" title="16"><span class="co">#   return(as.numeric(mean(res)&lt;=5))</span></a>
+<a class="sourceLine" id="cb3-17" title="17"><span class="co"># } ## permute half of the small sample size in each sample</span></a></code></pre></div>
+<ul>
+<li>First, compare the type-I error for each test.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co"># mu1 &lt;- mu2 &lt;-0</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="co"># s1 &lt;-1</span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="co"># s2 &lt;- 1</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="co"># clusterExport(cl,&quot;count5test&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="co"># clusterExport(cl,&quot;count5test1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="co"># clusterExport(cl,&quot;maxout&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="co"># clusterExport(cl,&quot;maxout20&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="co"># #clusterExport(cl,&quot;n1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-9" title="9"><span class="co"># #clusterExport(cl,&quot;n2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-10" title="10"><span class="co"># clusterExport(cl,&quot;mu1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-11" title="11"><span class="co"># clusterExport(cl,&quot;mu2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-12" title="12"><span class="co"># clusterExport(cl,&quot;s1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-13" title="13"><span class="co"># clusterExport(cl,&quot;s2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-14" title="14"><span class="co"># n&lt;-matrix(c(20,20,50,50,100,100,500,500,20,50,20,100,50,100,50,500,100,500),ncol=2,byrow = TRUE)</span></a>
+<a class="sourceLine" id="cb4-15" title="15"><span class="co"># res&lt;-matrix(rep(0,36),ncol = 4)</span></a>
+<a class="sourceLine" id="cb4-16" title="16"><span class="co"># for (i in 1:9) {</span></a>
+<a class="sourceLine" id="cb4-17" title="17"><span class="co">#   n1&lt;-n[i,1]</span></a>
+<a class="sourceLine" id="cb4-18" title="18"><span class="co">#   n2&lt;-n[i,2]</span></a>
+<a class="sourceLine" id="cb4-19" title="19"><span class="co">#   clusterExport(cl,&quot;n1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-20" title="20"><span class="co">#   clusterExport(cl,&quot;n2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb4-21" title="21"><span class="co">#   I&lt;-parSapply(cl,1:1000,FUN= function(o){</span></a>
+<a class="sourceLine" id="cb4-22" title="22"><span class="co">#     X &lt;- rnorm(n1,mu1,s1)</span></a>
+<a class="sourceLine" id="cb4-23" title="23"><span class="co">#     #X&lt;- rexp(n1,rate = s1)</span></a>
+<a class="sourceLine" id="cb4-24" title="24"><span class="co">#     #Y&lt;- rexp(n2,rate = s2)</span></a>
+<a class="sourceLine" id="cb4-25" title="25"><span class="co">#     Y &lt;- rnorm(n2,mu2,s2)</span></a>
+<a class="sourceLine" id="cb4-26" title="26"><span class="co">#     c(maxout(X,Y),count5test(X,Y),count5test1(X,Y),maxout20(X,Y))</span></a>
+<a class="sourceLine" id="cb4-27" title="27"><span class="co">#   })</span></a>
+<a class="sourceLine" id="cb4-28" title="28"><span class="co">#  res[i,] &lt;- 1-apply(I,1,mean)</span></a>
+<a class="sourceLine" id="cb4-29" title="29"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb4-30" title="30"><span class="co"># rownames(res)&lt;-c(&#39;(20,20)&#39;,&#39;(50,50)&#39;,&#39;(100,100)&#39;,&#39;(500,500)&#39;,&#39;(20,50)&#39;,&#39;(20,100)&#39;,&#39;(50,100)&#39;,&#39;(50,500)&#39;,&#39;(100,500)&#39;)  </span></a>
+<a class="sourceLine" id="cb4-31" title="31"><span class="co"># colnames(res)&lt;-c(&#39;count5&#39;,&#39;permu-count5&#39;,&#39;double-permu-couunt5&#39;,&#39;fixed-permu-count5&#39;)</span></a>
+<a class="sourceLine" id="cb4-32" title="32">res</a></code></pre></div>
+<pre><code>##           count5 permu-count5 double-permu-couunt5 fixed-permu-count5
+## (20,20)    0.060        0.060                0.004              0.060
+## (50,50)    0.086        0.086                0.016              0.003
+## (100,100)  0.110        0.110                0.029              0.000
+## (500,500)  0.106        0.106                0.038              0.000
+## (20,50)    0.288        0.031                0.006              0.031
+## (20,100)   0.603        0.021                0.000              0.021
+## (50,100)   0.238        0.061                0.002              0.001
+## (50,500)   0.861        0.034                0.001              0.000
+## (100,500)  0.638        0.052                0.008              0.000</code></pre>
+<p>According to the results, we can see when sample size is unequal, the primary count5 test is ineffective. One-permu-count5 is still effective. But as sample size increases, its type-I error increases. Double-permu-couunt5 is more robust to the sample size but its type-I error is rather small. Fixed-permu-count5 is opposite. As sample size increases, its type-I error decreases.</p>
+<ul>
+<li>Next, we check the power of each test</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># s2&lt;-1.5</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="co"># clusterExport(cl,&quot;s2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co"># res1&lt;-matrix(rep(0,36),ncol = 4)</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="co"># for (i in 1:9) {</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="co">#   n1&lt;-n[i,1]</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="co">#   n2&lt;-n[i,2]</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="co">#   clusterExport(cl,&quot;n1&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="co">#   clusterExport(cl,&quot;n2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="co">#   I&lt;-parSapply(cl,1:1000,FUN= function(o){</span></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="co">#     X &lt;- rnorm(n1,mu1,s1)</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="co">#     #X&lt;- rexp(n1,rate = s1)</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="co">#     #Y&lt;- rexp(n2,rate = s2)</span></a>
+<a class="sourceLine" id="cb6-13" title="13"><span class="co">#     Y &lt;- rnorm(n2,mu2,s2)</span></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="co">#     c(maxout(X,Y),count5test(X,Y),count5test1(X,Y),maxout20(X,Y))</span></a>
+<a class="sourceLine" id="cb6-15" title="15"><span class="co">#   })</span></a>
+<a class="sourceLine" id="cb6-16" title="16"><span class="co">#   res1[i,] &lt;- 1-apply(I,1,mean)</span></a>
+<a class="sourceLine" id="cb6-17" title="17"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb6-18" title="18"><span class="co"># stopCluster(cl)</span></a>
+<a class="sourceLine" id="cb6-19" title="19"><span class="co"># rownames(res1)&lt;-c(&#39;(20,20)&#39;,&#39;(50,50)&#39;,&#39;(100,100)&#39;,&#39;(500,500)&#39;,&#39;(20,50)&#39;,&#39;(20,100)&#39;,&#39;(50,100)&#39;,&#39;(50,500)&#39;,&#39;(100,500)&#39;)  </span></a>
+<a class="sourceLine" id="cb6-20" title="20"><span class="co"># colnames(res1)&lt;-c(&#39;count5&#39;,&#39;permu-count5&#39;,&#39;double-permu-couunt5&#39;,&#39;fixed-permu-count5&#39;)</span></a>
+<a class="sourceLine" id="cb6-21" title="21">res1</a></code></pre></div>
+<pre><code>##           count5 permu-count5 double-permu-couunt5 fixed-permu-count5
+## (20,20)    0.316        0.316                0.065              0.316
+## (50,50)    0.658        0.658                0.521              0.391
+## (100,100)  0.852        0.852                0.857              0.393
+## (500,500)  0.989        0.989                1.000              0.362
+## (20,50)    0.900        0.400                0.046              0.400
+## (20,100)   0.989        0.437                0.034              0.430
+## (50,100)   0.953        0.781                0.569              0.420
+## (50,500)   1.000        0.801                0.563              0.406
+## (100,500)  1.000        0.923                0.931              0.393</code></pre>
+<p>According to the results, the primary count5 test has the largest power. But considering its type-I error, it is still ineffective. One-permu-count5’s power is larger than double-permu-couunt5. And they both increase as sample size increases. Fixed-permu-count5 has the steadied power.(It might be improved by larger fixed size.)</p>
+</div>
+</div>
+<div id="p31-1" class="section level2">
+<h2>P31</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># dCov &lt;- function(x, y) {</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="co">#   x &lt;- as.matrix(x); y &lt;- as.matrix(y)</span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co">#   n &lt;- nrow(x); m &lt;- nrow(y)</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="co">#   if (n != m || n &lt; 2) stop(&quot;Sample sizes must agree&quot;)</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="co">#   if (! (all(is.finite(c(x, y)))))</span></a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="co">#     stop(&quot;Data contains missing or infinite values&quot;)</span></a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co">#   Akl &lt;- function(x) {</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="co">#     d &lt;- as.matrix(dist(x))</span></a>
+<a class="sourceLine" id="cb8-9" title="9"><span class="co">#     m &lt;- rowMeans(d); M &lt;- mean(d)</span></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="co">#     a &lt;- sweep(d, 1, m); b &lt;- sweep(a, 2, m)</span></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="co">#     b + M</span></a>
+<a class="sourceLine" id="cb8-12" title="12"><span class="co">#   }</span></a>
+<a class="sourceLine" id="cb8-13" title="13"><span class="co">#   A &lt;- Akl(x); B &lt;- Akl(y)</span></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="co">#   sqrt(mean(A * B))</span></a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb8-16" title="16"><span class="co"># ndCov2 &lt;- function(z, ix, dims) {</span></a>
+<a class="sourceLine" id="cb8-17" title="17"><span class="co">#   #dims contains dimensions of x and y</span></a>
+<a class="sourceLine" id="cb8-18" title="18"><span class="co">#   p &lt;- dims[1]</span></a>
+<a class="sourceLine" id="cb8-19" title="19"><span class="co">#   q &lt;- dims[2]</span></a>
+<a class="sourceLine" id="cb8-20" title="20"><span class="co">#   d &lt;- p + q</span></a>
+<a class="sourceLine" id="cb8-21" title="21"><span class="co">#   x &lt;- z[ , 1:p] #leave x as is</span></a>
+<a class="sourceLine" id="cb8-22" title="22"><span class="co">#   y &lt;- z[ix, -(1:p)] #permute rows of y</span></a>
+<a class="sourceLine" id="cb8-23" title="23"><span class="co">#   return(nrow(z) * dCov(x, y)^2)</span></a>
+<a class="sourceLine" id="cb8-24" title="24"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb8-25" title="25"><span class="co"># </span></a>
+<a class="sourceLine" id="cb8-26" title="26"><span class="co"># library(boot)</span></a>
+<a class="sourceLine" id="cb8-27" title="27"><span class="co"># library(Ball)</span></a>
+<a class="sourceLine" id="cb8-28" title="28"><span class="co"># nn&lt;-c(20,30,50,100,200)</span></a>
+<a class="sourceLine" id="cb8-29" title="29"><span class="co"># cl &lt;- makeCluster(8)</span></a>
+<a class="sourceLine" id="cb8-30" title="30"><span class="co"># clusterExport(cl,&quot;dCov&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb8-31" title="31"><span class="co"># clusterExport(cl,&quot;bcov.test&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb8-32" title="32"><span class="co"># clusterExport(cl,&quot;ndCov2&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb8-33" title="33"><span class="co"># clusterExport(cl,&quot;boot&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb8-34" title="34"><span class="co"># ress&lt;-matrix(rep(0,20),ncol = 4)</span></a>
+<a class="sourceLine" id="cb8-35" title="35"><span class="co"># for (i in 1:5) {</span></a>
+<a class="sourceLine" id="cb8-36" title="36"><span class="co">#   n&lt;- nn[i]</span></a>
+<a class="sourceLine" id="cb8-37" title="37"><span class="co">#   clusterExport(cl,&quot;n&quot;,envir = environment())</span></a>
+<a class="sourceLine" id="cb8-38" title="38"><span class="co">#   res2&lt;- parSapply(cl,1:1000,FUN= function(i){</span></a>
+<a class="sourceLine" id="cb8-39" title="39"><span class="co">#     set.seed(i*123)</span></a>
+<a class="sourceLine" id="cb8-40" title="40"><span class="co">#     X &lt;- cbind(rnorm(n),rnorm(n))</span></a>
+<a class="sourceLine" id="cb8-41" title="41"><span class="co">#     e &lt;- cbind(rnorm(n),rnorm(n))</span></a>
+<a class="sourceLine" id="cb8-42" title="42"><span class="co">#     Y1 &lt;- X/4+e</span></a>
+<a class="sourceLine" id="cb8-43" title="43"><span class="co">#     Y2 &lt;- X*e/4</span></a>
+<a class="sourceLine" id="cb8-44" title="44"><span class="co">#     boot.obj &lt;- boot(data = cbind(Y1,X), statistic = ndCov2, R = 99,</span></a>
+<a class="sourceLine" id="cb8-45" title="45"><span class="co">#                      sim = &quot;permutation&quot;, dims = c(2, 2))</span></a>
+<a class="sourceLine" id="cb8-46" title="46"><span class="co">#     tb &lt;- c(boot.obj$t0, boot.obj$t)</span></a>
+<a class="sourceLine" id="cb8-47" title="47"><span class="co">#     p.cor &lt;- mean(tb&gt;=tb[1])</span></a>
+<a class="sourceLine" id="cb8-48" title="48"><span class="co">#     boot.obj2 &lt;- boot(data = cbind(X,Y2), statistic = ndCov2, R = 99,</span></a>
+<a class="sourceLine" id="cb8-49" title="49"><span class="co">#                      sim = &quot;permutation&quot;, dims = c(2, 2))</span></a>
+<a class="sourceLine" id="cb8-50" title="50"><span class="co">#     tb2 &lt;- c(boot.obj2$t0, boot.obj2$t)</span></a>
+<a class="sourceLine" id="cb8-51" title="51"><span class="co">#     p.cor2 &lt;- mean(tb2&gt;=tb2[1])</span></a>
+<a class="sourceLine" id="cb8-52" title="52"><span class="co">#     p.ball &lt;- bcov.test(X,Y1)$p.value</span></a>
+<a class="sourceLine" id="cb8-53" title="53"><span class="co">#     p.ball2 &lt;- bcov.test(X,Y2)$p.value</span></a>
+<a class="sourceLine" id="cb8-54" title="54"><span class="co">#     #p.ball &lt;- bcov.test(Y1,Y2)$p.value</span></a>
+<a class="sourceLine" id="cb8-55" title="55"><span class="co">#     as.numeric(c(p.cor&lt;0.05,p.ball&lt;0.05,p.cor2&lt;0.05,p.ball2&lt;0.05))</span></a>
+<a class="sourceLine" id="cb8-56" title="56"><span class="co">#     #as.numeric(c(100*dCov(Y2,Y1)&gt;qchisq(0.95,4),p.ball&lt;0.05))</span></a>
+<a class="sourceLine" id="cb8-57" title="57"><span class="co">#   })</span></a>
+<a class="sourceLine" id="cb8-58" title="58"><span class="co">#   ress[i,] &lt;- apply(res2,1,mean)</span></a>
+<a class="sourceLine" id="cb8-59" title="59"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb8-60" title="60"><span class="co"># </span></a>
+<a class="sourceLine" id="cb8-61" title="61"><span class="co"># stopCluster(cl)</span></a>
+<a class="sourceLine" id="cb8-62" title="62"><span class="co"># par(mfrow=c(1,2))</span></a>
+<a class="sourceLine" id="cb8-63" title="63"><span class="kw">plot</span>(nn,ress[,<span class="dv">1</span>],<span class="dt">type =</span> <span class="st">&quot;b&quot;</span>,<span class="dt">ylab =</span> <span class="st">&quot;power&quot;</span>,<span class="dt">xlab =</span> <span class="st">&quot;sample size&quot;</span>,<span class="dt">main =</span> <span class="st">&quot;Model 1&quot;</span>)</a>
+<a class="sourceLine" id="cb8-64" title="64"><span class="kw">lines</span>(nn,ress[,<span class="dv">2</span>],<span class="dt">type =</span> <span class="st">&quot;b&quot;</span>,<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">plot</span>(nn,ress[,<span class="dv">3</span>],<span class="dt">type =</span> <span class="st">&quot;b&quot;</span>,<span class="dt">ylab =</span> <span class="st">&quot;power&quot;</span>,<span class="dt">xlab =</span> <span class="st">&quot;sample size&quot;</span>,<span class="dt">main =</span> <span class="st">&quot;Model 2&quot;</span>)</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="kw">lines</span>(nn,ress[,<span class="dv">4</span>],<span class="dt">type =</span> <span class="st">&quot;b&quot;</span>,<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>We can see from the figure in Model 1 the distance correlation’s power is larger than the ball covariance test and in Model 2 opposite.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

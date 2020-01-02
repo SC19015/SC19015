@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="19015" />
+
+
+<title>A-19015-2019-12-13</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">A-19015-2019-12-13</h1>
+<h4 class="author">19015</h4>
+<h4 class="date">2019/12/19</h4>
+
+
+
+<div id="p204-3" class="section level2">
+<h2>P204-3</h2>
+<ul>
+<li>Question:
+<ul>
+<li>Use both for loops and lapply() to fit linear models to the mtcars using the formulas stored in this list:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">formulas &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb1-2" title="2">mpg <span class="op">~</span><span class="st"> </span>disp,</a>
+<a class="sourceLine" id="cb1-3" title="3">mpg <span class="op">~</span><span class="st"> </span><span class="kw">I</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>disp),</a>
+<a class="sourceLine" id="cb1-4" title="4">mpg <span class="op">~</span><span class="st"> </span>disp <span class="op">+</span><span class="st"> </span>wt,</a>
+<a class="sourceLine" id="cb1-5" title="5">mpg <span class="op">~</span><span class="st"> </span><span class="kw">I</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>disp) <span class="op">+</span><span class="st"> </span>wt</a>
+<a class="sourceLine" id="cb1-6" title="6">)</a></code></pre></div>
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">formu.la &lt;-<span class="st"> </span><span class="kw">lapply</span>(formulas,<span class="dt">FUN =</span> <span class="cf">function</span>(formu) <span class="kw">lm</span>(formu,<span class="dt">data =</span> mtcars))</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">summary</span>(formu.la)</a></code></pre></div>
+<pre><code>##      Length Class Mode
+## [1,] 12     lm    list
+## [2,] 12     lm    list
+## [3,] 12     lm    list
+## [4,] 12     lm    list</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">formu.loop &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)  formu.loop[[i]] &lt;-<span class="st"> </span><span class="kw">lm</span>(formulas[[i]],<span class="dt">data =</span> mtcars)</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">summary</span>(formu.loop)</a></code></pre></div>
+<pre><code>##      Length Class Mode
+## [1,] 12     lm    list
+## [2,] 12     lm    list
+## [3,] 12     lm    list
+## [4,] 12     lm    list</code></pre>
+</div>
+<div id="p204-4" class="section level2">
+<h2>P204-4</h2>
+<ul>
+<li>Question:
+<ul>
+<li>Fit the model mpg ~ disp to each of the bootstrap replicates of mtcars in the list below by using a for loop and lapply(). Can you do it without an anonymous function?</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">bootstraps &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="cf">function</span>(i) {</a>
+<a class="sourceLine" id="cb6-2" title="2">rows &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mtcars), <span class="dt">rep =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb6-3" title="3">mtcars[rows, ]</a>
+<a class="sourceLine" id="cb6-4" title="4">})</a></code></pre></div>
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">boot.loop &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="kw">summary</span>(boot.loop)</a></code></pre></div>
+<pre><code>## Length  Class   Mode 
+##      0   list   list</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)  boot.loop[[i]] &lt;-<span class="st"> </span><span class="kw">lm</span>(mpg <span class="op">~</span><span class="st"> </span>disp,<span class="dt">data =</span> bootstraps[[i]])</a>
+<a class="sourceLine" id="cb9-2" title="2">boot.la &lt;-<span class="st"> </span><span class="kw">lapply</span>(bootstraps,<span class="dt">FUN =</span> <span class="cf">function</span>(x) <span class="kw">lm</span>(mpg <span class="op">~</span><span class="st"> </span>disp,<span class="dt">data =</span> x))</a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="kw">summary</span>(boot.la)</a></code></pre></div>
+<pre><code>##       Length Class Mode
+##  [1,] 12     lm    list
+##  [2,] 12     lm    list
+##  [3,] 12     lm    list
+##  [4,] 12     lm    list
+##  [5,] 12     lm    list
+##  [6,] 12     lm    list
+##  [7,] 12     lm    list
+##  [8,] 12     lm    list
+##  [9,] 12     lm    list
+## [10,] 12     lm    list</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">lapply</span>(bootstraps,lm,<span class="dt">formula=</span> mpg <span class="op">~</span><span class="st"> </span>disp)</a></code></pre></div>
+<pre><code>## [[1]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    30.56689     -0.04625  
+## 
+## 
+## [[2]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##     29.3585      -0.0396  
+## 
+## 
+## [[3]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    28.71686     -0.03559  
+## 
+## 
+## [[4]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    30.04891     -0.04159  
+## 
+## 
+## [[5]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    28.30830     -0.03527  
+## 
+## 
+## [[6]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    29.31883     -0.04317  
+## 
+## 
+## [[7]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    28.75281     -0.03951  
+## 
+## 
+## [[8]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##     28.6940      -0.0365  
+## 
+## 
+## [[9]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    31.01616     -0.04857  
+## 
+## 
+## [[10]]
+## 
+## Call:
+## FUN(formula = ..1, data = X[[i]])
+## 
+## Coefficients:
+## (Intercept)         disp  
+##    31.66586     -0.04584</code></pre>
+</div>
+<div id="p204-5" class="section level2">
+<h2>P204-5</h2>
+<ul>
+<li>Question:
+<ul>
+<li>For each model in the previous two exercises, extract R2 using the function below.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">  rsq &lt;-<span class="st"> </span><span class="cf">function</span>(mod) <span class="kw">summary</span>(mod)<span class="op">$</span>r.squared</a></code></pre></div>
+<ul>
+<li>Answers:</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">  <span class="kw">lapply</span>(formu.la,rsq)</a></code></pre></div>
+<pre><code>## [[1]]
+## [1] 0.7183433
+## 
+## [[2]]
+## [1] 0.8596865
+## 
+## [[3]]
+## [1] 0.7809306
+## 
+## [[4]]
+## [1] 0.8838038</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">  <span class="kw">lapply</span>(boot.la,rsq)</a></code></pre></div>
+<pre><code>## [[1]]
+## [1] 0.6915124
+## 
+## [[2]]
+## [1] 0.7396854
+## 
+## [[3]]
+## [1] 0.6200719
+## 
+## [[4]]
+## [1] 0.7786071
+## 
+## [[5]]
+## [1] 0.5965138
+## 
+## [[6]]
+## [1] 0.8139395
+## 
+## [[7]]
+## [1] 0.7482262
+## 
+## [[8]]
+## [1] 0.6129101
+## 
+## [[9]]
+## [1] 0.8047016
+## 
+## [[10]]
+## [1] 0.8391426</code></pre>
+</div>
+<div id="p214-3" class="section level2">
+<h2>P214-3</h2>
+<div id="question" class="section level3">
+<h3>Question:</h3>
+<ul>
+<li>The following code simulates the performance of a t-test for non-normal data. Use sapply() and an anonymous function to extract the p-value from every trial.</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">trials &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">100</span>,<span class="kw">t.test</span>(<span class="kw">rpois</span>(<span class="dv">10</span>, <span class="dv">10</span>), <span class="kw">rpois</span>(<span class="dv">7</span>, <span class="dv">10</span>)),<span class="dt">simplify =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<p>Extra challenge: get rid of the anonymous function by using [[ directly.</p>
+</div>
+<div id="answer" class="section level3">
+<h3>Answer:</h3>
+<ul>
+<li>Use sapply() and an anonymous function:</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>,<span class="dt">FUN =</span> <span class="cf">function</span>(o) <span class="kw">t.test</span>(<span class="kw">rpois</span>(<span class="dv">10</span>, <span class="dv">10</span>), <span class="kw">rpois</span>(<span class="dv">7</span>, <span class="dv">10</span>))<span class="op">$</span>p.value)</a></code></pre></div>
+<pre><code>##   [1] 0.64595525 0.46919849 0.97085907 0.56897134 0.91436418 0.26455353
+##   [7] 0.26610206 0.64489521 0.09834760 0.73174699 0.85807230 0.85984802
+##  [13] 0.14184137 0.47491045 0.20121408 0.68036871 0.85124098 0.05091216
+##  [19] 0.66878589 0.66981610 0.53408992 0.79686585 0.16792774 0.52229044
+##  [25] 0.22486946 0.56967643 0.30518965 0.41786772 0.72602448 0.44998976
+##  [31] 0.12263084 0.55421258 0.52966942 0.14147467 0.71248529 0.54064596
+##  [37] 0.77581074 0.43061410 0.52952426 0.99431476 0.37613391 0.59932299
+##  [43] 0.61979122 0.76512377 0.37127744 0.18791000 0.15039194 0.32595656
+##  [49] 0.83862866 0.11729322 0.14559819 0.35455978 0.61290323 0.83912896
+##  [55] 0.03084341 0.97437808 0.58554341 0.21634253 0.93648419 0.84670780
+##  [61] 0.41593473 0.36836148 0.22535395 0.92756207 0.01299245 0.59713517
+##  [67] 0.30086520 0.55867606 0.52568932 0.10137005 0.06763873 0.47202068
+##  [73] 0.11437430 0.74071627 0.43298281 0.73813279 0.36397649 0.11520589
+##  [79] 0.29334511 0.81967944 0.93811639 0.50808801 0.94088000 0.34900526
+##  [85] 0.31950870 0.61559964 0.31480087 0.38595723 0.77444984 0.68826133
+##  [91] 0.21934312 0.03730561 0.87876383 0.80848357 0.46684137 0.48265485
+##  [97] 0.38712877 0.50108452 0.06680063 0.57200698</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="kw">sapply</span>(trials, <span class="st">&#39;[[&#39;</span>,<span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##   [1] 0.59715993 0.93503018 0.59071745 0.64852794 0.23282739 0.54808854
+##   [7] 0.66333910 0.09411325 0.47348112 0.67959063 0.15106867 0.33710185
+##  [13] 0.16436965 1.00000000 0.50024838 0.44190664 0.30412165 0.79635615
+##  [19] 0.87846023 0.64025945 0.66906788 0.32354269 0.59933264 0.59976601
+##  [25] 0.24955469 0.68418344 0.15741073 0.66147788 0.26517962 0.56485517
+##  [31] 0.27101989 0.68783127 0.78472453 0.43511871 0.48330339 0.79822489
+##  [37] 0.23962815 0.05722597 0.77454110 0.46616162 0.81278627 0.06115523
+##  [43] 0.67790800 0.25199272 0.64535552 0.17494945 0.70416695 0.40701410
+##  [49] 0.05392866 0.20160970 0.41445847 0.65659320 0.27947393 0.12996825
+##  [55] 0.06128435 0.51189482 0.89209703 0.43195527 0.81709484 0.63243628
+##  [61] 0.17316975 0.72199136 0.45130003 0.83833939 0.19052795 0.54028439
+##  [67] 0.73311816 0.08362883 0.38338308 0.06873524 0.78976835 0.96395222
+##  [73] 0.12153051 0.79288159 0.15187442 0.33251961 0.93033308 0.23211152
+##  [79] 0.61111444 0.30357339 0.76155217 0.50776008 0.40823456 0.62686149
+##  [85] 0.58458660 0.02913734 0.55041463 0.55596904 0.91520194 0.51082426
+##  [91] 0.26473867 0.77424898 0.34192973 0.81835726 0.41119220 0.98646619
+##  [97] 0.69780456 0.97035905 0.87630837 0.92694267</code></pre>
+</div>
+</div>
+<div id="p214-7" class="section level2">
+<h2>P214-7</h2>
+<div id="question-1" class="section level3">
+<h3>Question:</h3>
+<ul>
+<li>Implement mcsapply(), a multicore version of sapply(). Can you implement mcvapply(), a parallel version of vapply()? Why or why not?</li>
+</ul>
+</div>
+<div id="answer-1" class="section level3">
+<h3>Answer:</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1">  <span class="kw">library</span>(parallel)</a>
+<a class="sourceLine" id="cb23-2" title="2">  cl &lt;-<span class="st"> </span><span class="kw">makeCluster</span>(<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb23-3" title="3">  <span class="kw">parSapply</span>(cl,<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>,<span class="dt">FUN=</span><span class="cf">function</span>(o){</a>
+<a class="sourceLine" id="cb23-4" title="4">    x&lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb23-5" title="5">    <span class="kw">mean</span>(x)</a>
+<a class="sourceLine" id="cb23-6" title="6">  })</a></code></pre></div>
+<pre><code>##   [1]  0.0265303131  0.0458863633 -0.2145063751 -0.0691181379 -0.1671222398
+##   [6] -0.0220740198 -0.0645769700  0.1062163770 -0.1317112038  0.0318694396
+##  [11] -0.0344240978  0.2016552054  0.1524940891 -0.1482782311 -0.0361966078
+##  [16]  0.0958192698  0.0279776924 -0.0184605812 -0.1274760483 -0.1193488449
+##  [21]  0.0161998373 -0.0943002573 -0.0459627762 -0.1049291705 -0.0391959274
+##  [26] -0.1450451169  0.0306554276  0.0140108484  0.0099105858 -0.0458952044
+##  [31]  0.0198230646 -0.0037365433  0.0788717283  0.1071341518 -0.0431304498
+##  [36]  0.0121846662 -0.1468846473 -0.0832225589  0.1131573983  0.0760365917
+##  [41]  0.0419674472 -0.0587207907  0.0826116410 -0.0670755191 -0.0437397707
+##  [46]  0.1660506179 -0.1330657153  0.0735640661 -0.0692676777  0.0613827451
+##  [51]  0.0149424655 -0.0426590740 -0.0235425316 -0.0537850336 -0.0001165713
+##  [56]  0.0401376218 -0.0500473977 -0.0200227082 -0.1348704923 -0.0911722003
+##  [61]  0.0503751561  0.0087581415 -0.0491322297 -0.0735696051 -0.1396691814
+##  [66] -0.0477595375 -0.0450247325  0.0652689862  0.0525743021  0.1907649008
+##  [71]  0.0259049596 -0.1597577010 -0.1320144730  0.0499324018  0.0469202244
+##  [76]  0.1261048991  0.1862076428 -0.0609886563  0.0644346589  0.0701003616
+##  [81]  0.1534609979 -0.0003222139  0.0254109553 -0.1223321795  0.0326706394
+##  [86]  0.1136144980 -0.1054965793 -0.0492283242  0.0471108776  0.0823132395
+##  [91]  0.0691010390  0.2677548353  0.1070556853 -0.0146267386  0.0927434702
+##  [96]  0.0406934249 -0.1097956000 -0.0340698859 -0.1532315609 -0.0952161076</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">  <span class="kw">stopCluster</span>(cl)</a></code></pre></div>
+<ul>
+<li>vapply can’t use for a multi core type, because the FUN.VALUE can’t be an environment value.</li>
+</ul>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

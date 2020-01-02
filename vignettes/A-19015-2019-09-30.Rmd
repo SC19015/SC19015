@@ -1,0 +1,122 @@
+---
+title: "Untitled"
+author: "19015"
+date: "2019/10/4"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A-19015-2019-09-30}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Questions
+1 The Rayleigh density [156, Ch. 18] is
+$$
+f(x)=\frac{x}{\sigma^{2}} e^{-x^{2} /\left(2 \sigma^{2}\right)}, \quad x \geq 0, \sigma>0
+$$
+Develop an algorithm to generate random samples from a Rayleigh($\sigma$) distribution. Generate Rayleigh($\sigma$) samples for several choices of $\sigma>0$  and check that the mode of the generated samples is close to the theoretical mode $\sigma$ (check the histogram).
+
+2 Generate a random sample of size 1000 from a normal location mixture. The components of the mixture have N(0, 1) and N(3, 1) distributions with mixing probabilities p1 and p2 = 1 − p1. Graph the histogram of the sample with density superimposed, for p1 = 0.75. Repeat with different values for p1 and observe whether the empirical distribution of the mixture appears to be bimodal. Make a conjecture about the values of p1 that produce bimodal mixtures.
+
+3 Write a function to generate a random sample from a $W_d(\Sigma, n)$ (Wishart) distribution for n > d + 1 $\geq$ 1, based on Bartlett’s  decomposition.
+
+## Answers
+
+### 1
+
++ Use the inverse transform method. First, let $\sigma = 1$.  
+```{r}
+  load('A-19015-2019-09-30.RData')
+  # sigma<-1
+  # f1<-function(x){
+  #   x/sigma^2*exp(-x^2/(2*sigma^2))
+  # }
+  # The Rayleigh density
+```
+Second, generate 10000 samples for uniform distribution of (0,1).
+```{r}
+  # F1<-runif(10000)
+```
+Third, calculate the inverse transform of each sample.
+```{r}
+  # x<-sqrt(-2*sigma^2*log(1-F1))
+```
+Last, show the result in a histogram.
+```{r}
+hist(x,breaks = 100,probability = T,main = 'Rayleigh distribution,σ=1')
+y<-seq(0,8,0.1)
+lines(y,f1(y),col='red')
+```
+
++ Next, show the results when $\sigma = 0.5$ and $\sigma = 2$
+```{r echo=FALSE}
+  sigma<-0.5
+  F1<-runif(10000)
+  x<-sqrt(-2*sigma^2*log(1-F1))
+  hist(x,breaks = 100,probability = T,main = 'Rayleigh distribution,σ=0.5')
+  y<-seq(0,5,0.1)
+  lines(y,f1(y),col='red')
+  sigma<-2
+  F1<-runif(10000)
+  x<-sqrt(-2*sigma^2*log(1-F1))
+  hist(x,breaks = 100,probability = T,main = 'Rayleigh distribution,σ=2')
+  y<-seq(0,10,0.1)
+  lines(y,f1(y),col='red')
+
+```
+
+### 2
+
++ Show the result when p1 = 0.75.
+```{r}
+# mixnormhist<-function(p1){
+#   f2<-function(x){
+#     p1*dnorm(x)+(1-p1)*dnorm(x,3,1)
+#   }
+#   #Mix-normal distribution
+#   p<-rbinom(10000,1,prob = p1) #Generate the choices of 10000 samples (0:N(3,1),1:N(0,1))
+#   x1<-rnorm(10000)
+#   x2<-rnorm(10000,3,1)
+#   x<-p*x1+(1-p)*x2 #Generate  samples
+#   title<-paste('p1 = ',p1)
+#   hist(x,breaks = 200,probability = T,main = title)
+#   y<-seq(-3,6,0.1)
+#   lines(y,f2(y),col='red')
+# }
+mixnormhist(0.75)
+```
+
++ Draw the hists of p1=[0.1,0.2,...,0.9]
+```{r}
+  for (p1 in seq(0.1,0.9,0.1)){
+    mixnormhist(p1)
+  }
+```
+
++ Make the conjecture that when 0.25 < p1 < 0.75  there will be bimodal mixtures.
+
+### 3
+
++ Let n=10, d=3,$\Sigma = \left[  \begin{matrix}   2 & -1 & 2 \\    -1 & 2 & -1 \\    2 & -1 & 2   \end{matrix}   \right]$
+```{r,echo =FALSE}
+n<-10
+d<-3
+Sigma<-rbind(c(2,-1,2),c(-1,2,-1),c(2,-1,2))
+L<-t(chol(Sigma)) # L is the Choleski factorization of Sigma
+```
+
++ Genarate a random sample from a $W_3(\Sigma, 10)$ based on Bartlett’s  decomposition.
+```{r}
+# A<-matrix(rep(0,d^2),nrow = d) # Initial
+# A[1,1]<-sqrt(rchisq(1,n))
+# for (i in 2:d){
+#   A[i,i]<-sqrt(rchisq(1,n-i+1))
+#   A[i,1:(i-1)]<-rnorm(i-1)
+# } #Bartlett’s  decomposition
+# S<-L%*%A%*%t(A)%*%t(L)
+S
+```

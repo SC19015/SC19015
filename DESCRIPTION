@@ -1,0 +1,15 @@
+Package: SC19015
+Type: Package
+Title: SC19015
+Version: 1.0
+Date: 2019-12-30
+Author: SC19015
+Maintainer: SC19015 <name@mail.com>
+Description: Several R and Rcpp function are included in this package for illustration. 
+License: GPL (>= 2)
+Imports: knitr, rmarkdown
+LinkingTo: Rcpp
+RoxygenNote: 7.0.2
+VignetteBuilder: knitr
+URL: http://github.com/SC19015/SC19015
+BugReports: http://github.com/SC19015/SC19015/issues

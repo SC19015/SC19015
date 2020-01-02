@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="19015" />
+
+
+<title>Homework11.15</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Homework11.15</h1>
+<h4 class="author">19015</h4>
+<h4 class="date">2019/11/20</h4>
+
+
+
+<div id="questions" class="section level2">
+<h2>Questions</h2>
+<div id="section" class="section level3">
+<h3>7.8</h3>
+<ul>
+<li>Refer to Exercise 7.7. Obtain the jackknife estimates of bias and standard error of <span class="math inline">\(\hat \theta\)</span>.</li>
+</ul>
+</div>
+<div id="section-1" class="section level3">
+<h3>7.10</h3>
+<ul>
+<li>In Example 7.18, leave-one-out (n-fold) cross validation was used to select the best fitting model. Repeat the analysis replacing the Log-Log model with a cubic polynomial model. Which of the four models is selected by the cross validation procedure? Which model is selected according to maximum adjusted <span class="math inline">\(R^2\)</span>?</li>
+</ul>
+</div>
+</div>
+<div id="answers" class="section level2">
+<h2>Answers</h2>
+<div id="section-2" class="section level3">
+<h3>7.8</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">load</span>(<span class="st">&quot;A-19015-2019-11-15.RData&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># library(bootstrap)</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># sc&lt;-scor</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"># theta&lt;-function(x){ # function used to compute theta</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">#   sigma&lt;-cov(x)</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co">#   pca.sigma&lt;-prcomp(sigma)</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">#   theta&lt;-pca.sigma$sdev[1]/sum(pca.sigma$sdev)</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">#   theta</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co"># n&lt;-dim(sc)[1]</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="co"># theta.j&lt;- numeric(n)</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co"># for (i in 1:n){    # compute theta for each leave-one-out sample</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="co">#   theta.j[i]&lt;-theta(sc[-i,])</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="co"># }</span></a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="co"># theta.hat&lt;-theta(sc)</span></a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="co"># bias&lt;-(n-1)*(mean(theta.j)-theta.hat) #BIAS</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="co"># ss&lt;-(n-1)*var(theta.j)</span></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="co"># se&lt;-sqrt(ss) #SE</span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="kw">c</span>(<span class="dt">BIAS=</span>bias,<span class="dt">SE=</span>se)</a></code></pre></div>
+<pre><code>##       BIAS         SE 
+## 0.01433958 0.05299504</code></pre>
+</div>
+<div id="section-3" class="section level3">
+<h3>7.10</h3>
+<ul>
+<li>Fit every model , draw a figure and compute adjusted <span class="math inline">\(R^2\)</span></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">library</span>(DAAG,<span class="dt">quietly=</span><span class="ot">TRUE</span>); <span class="kw">attach</span>(ironslag)</a>
+<a class="sourceLine" id="cb3-2" title="2">a &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">10</span>, <span class="dv">40</span>, <span class="fl">.1</span>)     <span class="co">#sequence for plotting fits</span></a>
+<a class="sourceLine" id="cb3-3" title="3">r&lt;-<span class="kw">numeric</span>(<span class="dv">4</span>)  </a>
+<a class="sourceLine" id="cb3-4" title="4">L1 &lt;-<span class="st"> </span><span class="kw">lm</span>(magnetic <span class="op">~</span><span class="st"> </span>chemical)</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">plot</span>(chemical, magnetic, <span class="dt">main=</span><span class="st">&quot;Linear&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>)</a>
+<a class="sourceLine" id="cb3-6" title="6">yhat1 &lt;-<span class="st"> </span>L1<span class="op">$</span>coef[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>L1<span class="op">$</span>coef[<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span>a</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="kw">lines</span>(a, yhat1, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">r[<span class="dv">1</span>]&lt;-<span class="kw">summary</span>(L1)<span class="op">$</span>adj.r.squared</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">L2 &lt;-<span class="st"> </span><span class="kw">lm</span>(magnetic <span class="op">~</span><span class="st"> </span>chemical <span class="op">+</span><span class="st"> </span><span class="kw">I</span>(chemical<span class="op">^</span><span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="kw">plot</span>(chemical, magnetic, <span class="dt">main=</span><span class="st">&quot;Quadratic&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>)</a>
+<a class="sourceLine" id="cb4-5" title="5">yhat2 &lt;-<span class="st"> </span>L2<span class="op">$</span>coef[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>L2<span class="op">$</span>coef[<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span>a <span class="op">+</span><span class="st"> </span>L2<span class="op">$</span>coef[<span class="dv">3</span>] <span class="op">*</span><span class="st"> </span>a<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="kw">lines</span>(a, yhat2, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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z6fvtjnV4ITbr9znpzNBbjgg5Mar3DFIAvI+g6zbUX3BvE+crO6fgR+xZihww5c8Qm68KgJItndnqxc2hx3P43M/MZCnQSI/rYnfTSPYATd+LQZotDmwUTHa7ac5913u2sFX/VkfoKAmJuRa11Km0Xr9mJm2nuUxeShbXRMDUdEEZO+ku988+PzUZuDx9PWtj/UFadCvGhDtX+t5mSKnH2XicaN3raebP6lT9Y/Mul6Mn7A1uu636l2nn7OJ2414XKOAs56Bov4ua9/YvrPhz5e2ho5a5oBxBy4/honTjbHLezp+0WQViAABESAgAgREgIAIEBABAiJAQAQIiAABESAgAgREgIAIEBABAiJAQAQIiAABESAgAgREgIAIEBABAiJAQAQIiAABESCgVQHyPx3GujfPA2U8uiBAuT4SJwIEtBJAtciWP+y+38qElVqmru63f9u1G3vxrmRRd3n1XWrLjQCSzyd9POx44nP3j+dI7bciof7+mSfQCRadpcibktu3AEjkxKu/++0b+bq5fxaJZN1/bzgLbfnNO5ljdxuAVJKqKG37n0yXU+mX6j/xuG4jnbU5t7uCWgegLklVA+oWYrMAUumsbSi6//eN16DTmc2oBukdtwHoHIMkIF3qESBlKRP6b6aJif7o+LRRgMTrU9X93McEpCxl5RG/1bgJQHocpEY2/HVbScaA1DhIJPa2CG8F0HpFgIAIEBABAiJAQAQIiAABESAgAgREgIAIEBABAiJAQAQIiAABESAgAgREgIAIEBABAiJAQAQIiAABESCg/wN1MUdLdRK+nAAAAABJRU5ErkJggg==" /><!-- --></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">r[<span class="dv">2</span>]&lt;-<span class="kw">summary</span>(L2)<span class="op">$</span>adj.r.squared</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3">L3 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="kw">log</span>(magnetic) <span class="op">~</span><span class="st"> </span>chemical)</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">plot</span>(chemical, magnetic, <span class="dt">main=</span><span class="st">&quot;Exponential&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>)</a>
+<a class="sourceLine" id="cb5-5" title="5">logyhat3 &lt;-<span class="st"> </span>L3<span class="op">$</span>coef[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>L3<span class="op">$</span>coef[<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span>a</a>
+<a class="sourceLine" id="cb5-6" title="6">yhat3 &lt;-<span class="st"> </span><span class="kw">exp</span>(logyhat3)</a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="kw">lines</span>(a, yhat3, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">r[<span class="dv">3</span>]&lt;-<span class="kw">summary</span>(L3)<span class="op">$</span>adj.r.squared</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3">L4 &lt;-<span class="st"> </span><span class="kw">lm</span>(magnetic <span class="op">~</span><span class="st"> </span>chemical <span class="op">+</span><span class="st"> </span><span class="kw">I</span>(chemical<span class="op">^</span><span class="dv">2</span>)<span class="op">+</span><span class="st"> </span><span class="kw">I</span>(chemical<span class="op">^</span><span class="dv">3</span>))</a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="kw">plot</span>(chemical, magnetic, <span class="dt">main=</span><span class="st">&quot;Cubic&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>)</a>
+<a class="sourceLine" id="cb6-5" title="5">hat4 &lt;-<span class="st"> </span>L4<span class="op">$</span>coef[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>L4<span class="op">$</span>coef[<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span>a <span class="op">+</span><span class="st"> </span>L4<span class="op">$</span>coef[<span class="dv">3</span>] <span class="op">*</span><span class="st"> </span>a<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>L4<span class="op">$</span>coef[<span class="dv">4</span>] <span class="op">*</span><span class="st"> </span>a<span class="op">^</span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="kw">lines</span>(a, hat4, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">r[<span class="dv">4</span>]&lt;-<span class="kw">summary</span>(L4)<span class="op">$</span>adj.r.squared</a></code></pre></div>
+<ul>
+<li>Use cross validation to select the best model.</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># n &lt;- length(magnetic) #in DAAG ironslag</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="co"># e1 &lt;- e2 &lt;- e3 &lt;- e4 &lt;- numeric(n)</span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co"># # for n-fold cross validation</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="co"># # fit models on leave-one-out samples</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="co"># for (k in 1:n) {</span></a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="co">#   y &lt;- magnetic[-k]</span></a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co">#   x &lt;- chemical[-k]</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="co">#   J1 &lt;- lm(y ~ x)</span></a>
+<a class="sourceLine" id="cb8-9" title="9"><span class="co">#   yhat1 &lt;- J1$coef[1] + J1$coef[2] * chemical[k]</span></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="co">#   e1[k] &lt;- magnetic[k] - yhat1</span></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="co">#   </span></a>
+<a class="sourceLine" id="cb8-12" title="12"><span class="co">#   J2 &lt;- lm(y ~ x + I(x^2))</span></a>
+<a class="sourceLine" id="cb8-13" title="13"><span class="co">#   yhat2 &lt;- J2$coef[1] + J2$coef[2] * chemical[k] +</span></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="co">#     J2$coef[3] * chemical[k]^2</span></a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="co">#   e2[k] &lt;- magnetic[k] - yhat2</span></a>
+<a class="sourceLine" id="cb8-16" title="16"><span class="co">#   </span></a>
+<a class="sourceLine" id="cb8-17" title="17"><span class="co">#   J3 &lt;- lm(log(y) ~ x)</span></a>
+<a class="sourceLine" id="cb8-18" title="18"><span class="co">#   logyhat3 &lt;- J3$coef[1] + J3$coef[2] * chemical[k]</span></a>
+<a class="sourceLine" id="cb8-19" title="19"><span class="co">#   yhat3 &lt;- exp(logyhat3)</span></a>
+<a class="sourceLine" id="cb8-20" title="20"><span class="co">#   e3[k] &lt;- magnetic[k] - yhat3</span></a>
+<a class="sourceLine" id="cb8-21" title="21"><span class="co">#   </span></a>
+<a class="sourceLine" id="cb8-22" title="22"><span class="co">#   J4 &lt;- lm(y ~ x + I(x^2)+I(x^3))</span></a>
+<a class="sourceLine" id="cb8-23" title="23"><span class="co">#   yhat4 &lt;- J4$coef[1] + J4$coef[2] * chemical[k] +J4$coef[3] * chemical[k]^2 +J4$coef[3] * chemical[k]^3</span></a>
+<a class="sourceLine" id="cb8-24" title="24"><span class="co">#   e4[k] &lt;- magnetic[k] - yhat4</span></a>
+<a class="sourceLine" id="cb8-25" title="25"><span class="co"># }</span></a></code></pre></div>
+<ul>
+<li>The results of CV</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">c</span>(<span class="kw">mean</span>(e1<span class="op">^</span><span class="dv">2</span>), <span class="kw">mean</span>(e2<span class="op">^</span><span class="dv">2</span>), <span class="kw">mean</span>(e3<span class="op">^</span><span class="dv">2</span>), <span class="kw">mean</span>(e4<span class="op">^</span><span class="dv">2</span>))</a></code></pre></div>
+<pre><code>## [1] 1.955644e+01 1.785248e+01 1.844188e+01 2.155967e+06</code></pre>
+<p>So according to the results of cv we should choose the Quadratic Model.</p>
+<ul>
+<li>The results of adjusted <span class="math inline">\(R^2\)</span></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">r</a></code></pre></div>
+<pre><code>## [1] 0.5281545 0.5768151 0.5280556 0.5740396</code></pre>
+<p>So according to the results of adjusted <span class="math inline">\(R^2\)</span> we should choose the Quadratic Model.</p>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
